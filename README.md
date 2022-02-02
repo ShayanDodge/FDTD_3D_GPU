@@ -1,1 +1,1 @@
-# FDTD_3D_-GPU
+# FDTD 3D GPU
