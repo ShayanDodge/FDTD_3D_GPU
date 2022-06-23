@@ -16,55 +16,15 @@ Psi_hzx_xn=cpml_b1_mx_xn.*Psi_hzx_xn+cpml_a1_mx_xn.*...
 Hy=Hy+CPsi_hyx_xn.*Psi_hyx_xn;
 Hz=Hz+CPsi_hzx_xn.*Psi_hzx_xn;
 
-Psi_hyx_xp=cpml_b_mx_xp.*Psi_hyx_xp+...
-    cpml_a_mx_xp.*(ez_12-ez_1);
-Psi_hzx_xp=cpml_b1_mx_xp.*Psi_hzx_xp+...
-    cpml_a1_mx_xp.*(ey_12 -ey_1);
-Hy=Hy+CPsi_hyx_xp.*Psi_hyx_xp;
-Hz=Hz+CPsi_hzx_xp.*Psi_hzx_xp;
-
-Psi_hxy_yn=cpml_b_my_yn.*Psi_hxy_yn+cpml_a_my_yn.*...
-    (ez_22 - ez_2);
-Psi_hzy_yn=cpml_b1_my_yn.*Psi_hzy_yn+cpml_a1_my_yn.*...
-    (ex_22 - ex_2);
-
-Hx=Hx+CPsi_hxy_yn.*Psi_hxy_yn;
-Hz=Hz+CPsi_hzy_yn.*Psi_hzy_yn;
-
-Psi_hxy_yp=cpml_b_my_yp.*Psi_hxy_yp+cpml_a_my_yp.*...
-    (ez_22-ez_2);
-Psi_hzy_yp=cpml_b1_my_yp.*Psi_hzy_yp+cpml_a1_my_yp.*...
-    (ex_22-ex_2);
-
-Hx=Hx+CPsi_hxy_yp.*Psi_hxy_yp;
-Hz=Hz+CPsi_hzy_yp.*Psi_hzy_yp;
-
-Psi_hxz_zn=(cpml_b_mz_zn).*Psi_hxz_zn+(cpml_a_mz_zn).*...
-    (ey_32 - ey_3);
-Psi_hyz_zn=(cpml_b1_mz_zn).*Psi_hyz_zn+cpml_a1_mz_zn.*...
-    (ex_32 - ex_3);
-
-
-Hy=Hy+CPsi_hyz_zn.*Psi_hyz_zn;
-Hx=Hx+CPsi_hxz_zn.*Psi_hxz_zn;
-
-Psi_hxz_zp=cpml_b_mz_zp.*Psi_hxz_zp+cpml_a_mz_zp.*...
-    (ey_32-ey_3);
-Psi_hyz_zp=(cpml_b1_mz_zp).*Psi_hyz_zp+cpml_a1_mz_zp.*...
-    (ex_32-ex_3);
-
-Hy=Hy+CPsi_hyz_zp.* Psi_hyz_zp;
-Hx=Hx+CPsi_hxz_zp.* Psi_hxz_zp;
-
+% ************************************
+% ************************************
+% Contact me to see the complete code.
+% Shayan Dodge 
+% dodgeshayan@gmail.com
+% ************************************
+% ************************************
 
 Hx = ((Chxh.* Hx)+(Chxey.*(ey_32-ey_3 ))+...
     (Chxez.*(ez_22-ez_2))).*sh_1;
-Hy = (Chyh.* Hy)+(Chyez .*(ez_12-ez_1 ))+...
-      (Chyex.*(ex_32-ex_3)).*sh_2;
-Hz= (Chzh.* Hz+Chzex.*(ex_22-ex_2 )+...
-     Chzey.*(ey_12- ey_1 )).*sh_3;
-
- 
-
 end
 
